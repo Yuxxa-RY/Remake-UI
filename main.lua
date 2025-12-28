@@ -11493,36 +11493,6 @@ end
 local m
 local p
 ak.Icon"minimize"
-ak.Icon"maximize"
-
-au:CreateTopbarButton("Fullscreen","maximize",function()
-au:ToggleFullscreen()
-end,(au.Topbar.ButtonsType=="Default"and 998 or 999),nil,Color3.fromHex"#60C762")
-
-function au.ToggleFullscreen(r)
-local u=au.IsFullscreen
-
-l:Set(u)
-
-if not u then
-m=au.UIElements.Main.Position
-p=au.UIElements.Main.Size
-
-au.CanResize=false
-else
-if au.Resizable then
-au.CanResize=true
-end
-end
-
-am(au.UIElements.Main,0.45,{Size=u and p or UDim2.new(1,-20,1,-72)},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-
-am(au.UIElements.Main,0.45,{Position=u and m or UDim2.new(0.5,0,0.5,26)},Enum.EasingStyle.Quint,Enum.EasingDirection.Out):Play()
-
-
-
-au.IsFullscreen=not u
-end
 
 
 au:CreateTopbarButton("Minimize","minus",function()
