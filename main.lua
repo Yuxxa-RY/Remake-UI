@@ -11492,11 +11492,8 @@ end
 
 local m
 local p
-ak.Icon"minimize"
 
-
-au:CreateTopbarButton("Minimize","minus",function()
-au:Close()
+au:CreateTopbarButton("Moving","move",function()
 
 
 
@@ -12647,18 +12644,6 @@ aa.Window=aE
 if ay.Acrylic then
 ar.init()
 end
-
-
-
-
-
-
-
-
-
-
-
-
 
 return aE
 end
